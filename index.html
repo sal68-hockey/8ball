@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magic Eight Ball</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: linear-gradient(to bottom, #2c3e50, #3498db);
+            color: white;
+            padding: 20px;
+        }
+
+        #eightBallContainer {
+            margin: 50px auto;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+        }
+
+        #eightBallResponse {
+            color: white;
+            font-size: 1.5rem;
+            text-align: center;
+            padding: 10px;
+        }
+
+        input,
+        button {
+            margin: 10px 0;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #3498db;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Magic Eight Ball</h1>
+    <p>Ask a question, and the Magic Eight Ball will reveal your fortune!</p>
+
+    <input id="userName" type="text" placeholder="Enter your name">
+    <br>
+    <input id="userQuestion" type="text" placeholder="Ask your question">
+    <br>
+    <button onclick="askEightBall()">Ask the Eight Ball</button>
+
+    <div id="eightBallContainer">
+        <div id="eightBallResponse">8</div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
