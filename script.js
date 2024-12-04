@@ -3,18 +3,18 @@ function askEightBall() {
     const userQuestionInput = document.getElementById('userQuestion').value.trim();
     const eightBallResponse = document.getElementById('eightBallResponse');
     
-    // Ensure a question is asked
+    
     if (!userQuestionInput) {
       eightBallResponse.textContent = "Please ask a question!";
       return;
     }
   
-    // Greet the user
+    
     const userName = userNameInput || 'User';
     console.log(`${userName ? `Hello, ${userName}!` : 'Hello!'}`);
     console.log(`${userName} asked: ${userQuestionInput}`);
   
-    // Generate a random response
+    
     const randomNumber = Math.floor(Math.random() * 8);
     let eightBall = '';
     switch (randomNumber) {
@@ -25,9 +25,11 @@ function askEightBall() {
       case 4: eightBall = 'Do not count on it'; break;
       case 5: eightBall = 'My sources say no'; break;
       case 6: eightBall = 'Outlook not so good'; break;
+      case 7: eightBall = 'your just wrong'; break;
+      case 8: eightBall = 'madam cooper says yes '; break;
       default: eightBall = 'Signs point to yes'; break;
     }
   
-    // Display the response
+    
     eightBallResponse.textContent = eightBall;
   }
